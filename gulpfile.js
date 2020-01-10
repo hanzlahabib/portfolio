@@ -19,7 +19,8 @@ const webpack = require('webpack-stream')
 const files = {
   scssPath: 'src/scss/**/*.scss',
   scssMainPath: 'src/scss/main.scss',
-  jsPath: 'src/js/**/*.js',
+  jsMainPath: 'src/js/main/**/*.js',
+  jsPluginsPath: 'src/js/plugins/**/*.js',
   htmlIndexPath: 'src/index.html',
   htmlPagesPath: 'src/pages/**/*.html',
   htmlPath: 'src/**/*.html',
@@ -57,13 +58,14 @@ function imageOpt(done) {
 // JS task
 
 function jsTask(done) {
-  src(files.jsPath)
+  src(files.jsMainPath)
     .pipe(babel({
       presets: ['@babel/env']
     }))
     .pipe(webpack())
     .pipe(concat('main.js'))
     .pipe(dest('build/js'));
+
   done()
 }
 function htmlIndexTask(done) {
@@ -73,13 +75,18 @@ function htmlIndexTask(done) {
   done();
 
 }
+function jsPlugin(done) {
+  src(files.jsPluginsPath, { allowEmpty: true })
+    .pipe(dest('build/js/plugin/', { allowEmpty: true })
+    );
+  done();
+}
 
 function jsonData(done) {
   src(files.jsonData, { allowEmpty: true })
     .pipe(dest('build/data/', { allowEmpty: true })
     );
   done();
-
 }
 
 function htmlPagesTask(done) {
@@ -118,7 +125,7 @@ function cacheBustTask(done) {
 // watch task
 
 function watchTask(done) {
-  watch([files.scssPath, files.jsPath, files.htmlPagesPath, files.htmlIndexPath],
+  watch([files.scssPath, files.jsMainPath, files.htmlPagesPath, files.htmlIndexPath],
     parallel(scssTask, jsTask, htmlPagesTask, htmlIndexTask));
   done()
 }
@@ -130,12 +137,12 @@ function killProcess(done){
 // Default task
 
 exports.dev = series(
-  parallel(htmlPagesTask, htmlIndexTask, scssTask, jsTask, browserSyncTask,imageOpt, jsonData),
+  parallel(htmlPagesTask, htmlIndexTask, scssTask, jsTask, browserSyncTask,imageOpt, jsonData, jsPlugin),
   cacheBustTask,
   watchTask
 )
 
 exports.build = series(
-  parallel(htmlPagesTask,htmlIndexTask, scssTask, jsTask, imageOpt, jsonData),
+  parallel(htmlPagesTask,htmlIndexTask, scssTask, jsTask, imageOpt, jsonData,jsPlugin),
   cacheBustTask,
 )
