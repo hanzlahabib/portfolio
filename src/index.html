@@ -15,69 +15,68 @@
 
   <div class="wrapper">
     <section class="header section">
-        <div class="overlay">
-      <div class="container">
-        <div class="navbar">
-          <div class="logo">
-            Hanzla<span>.</span>
+      <div class="overlay">
+        <div class="container">
+          <div class="navbar">
+            <div class="logo">
+              Hanzla<span>.</span>
+            </div>
+            <div class="menu">
+              <ul class="menu__wrapper">
+                <li class="menu__item"><a href="#">Home</a></li>
+                <li class="menu__item"><a href="#">Experience</a></li>
+                <li class="menu__item"><a href="#">Portfolio</a></li>
+                <li class="menu__item"><a href="#">About</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="menu">
-            <ul class="menu__wrapper">
-              <li class="menu__item"><a href="#">Home</a></li>
-              <li class="menu__item"><a href="#">Experience</a></li>
-              <li class="menu__item"><a href="#">Portfolio</a></li>
-              <li class="menu__item"><a href="#">About</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="hero">
+          <div class="hero">
             <div class="hero-section-1">
               <main class="welcome">
-                  <h2 class="title">
-                   <span>Hey,</span>
-                   <span>I am <span class="typeWords primary-text">Hanzla</span></span>
-                  </h2>
+                <h2 class="title">
+                  <span>Hey,</span>
+                  <span>I am <span class="typeWords primary-text">Hanzla</span></span>
+                </h2>
               </main>
             </div>
-            <div class="hero-section-2">
-              <div id="scene" data-relative-input="true" data-clip-relative-input="true">
-                <div class="layer1 " data-depth="0.2" style="float: right;"><img src="./images/a1.png" alt=""></div>
-                <div class="layer2" data-depth="0.1" style="margin-top: 20px; margin-left: 400px;"><img src="./images/a3.png" alt=""></div>
-                <div class="layer3" data-depth="0.5" style="margin-top: 80px; margin-left: 100px;"><img src="./images/a4.png" alt=""></div>
-                <div class="layer4" data-depth="0.8" style="margin-top: 90px; margin-left: 80px;"><img src="./images/a5.png" alt=""></div>
-                <div class="layer5" data-depth="0.1" style="margin-top: -50px; margin-left: 100px;"><img src="./images/a6.png" alt=""></div>
+            <div class="hero-section-2 p-re">
+              <div class="p-re" id="scene" data-relative-input="true" data-clip-relative-input="true">
+                <div class="layer1 p-ab  " data-depth="0.2" style="float: right;"><img src="./images/a1.png" alt="">
+                </div>
+                <div class="layer2 p-ab" data-depth="0.1" style="margin-top: 20px; margin-left: 200px;"><img
+                    src="./images/a3.png" alt=""></div>
+                <div class="layer3 p-ab" data-depth="0.5" style="margin-top: 180px; margin-left: 50px;"><img
+                    src="./images/a4.png" alt=""></div>
+                <div class="layer4 p-ab" data-depth="0.8" style="margin-top: 0px; margin-left: 80px;"><img
+                    src="./images/a5.png" alt=""></div>
+                <div class="layer5 p-ab" data-depth="0.1" style="margin-top: 30px; margin-left: 170px;"><img
+                    src="./images/a6.png" alt=""></div>
               </div>
-                <div class="table-image" data-depth="0.6"><img style="width: 500px;" src="./images/dev-0.svg" alt=""></div>
+              <div id="table-img" class="table-image p-ab" data-depth="0.6"><img style="width: 500px;"
+                  src="./images/dev-0.svg" alt=""></div>
 
             </div>
+          </div>
+
         </div>
-      </div>
       </div>
     </section>
 
-    <section class="container section intro vh-70 vw">
-          <div class="intro__header h50 w100">
-              <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque doloremque dolores, perspiciatis sunt voluptate repellendus at? Autem</h3>
-              <svg viewBox="0 0 215 110">
-
-                <polygon class="polymorph" points="215,110 0,110 0,0 49.3,0 215,0" />
-
-            </svg>
-            </div>
+    <section class="section intro">
+      <div class="intro-wrapper container">
+        <div class="intro-card">
+          .
+        </div>
+      </div>
     </section>
   </div>
 
-
-<script src="./js/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/vendors/easings.min.js"></script>
-
-  <script>
-  new fullpage('.wrapper', {
-	//options here
-});
-
-//methods
-</script>
+  <script src="js/plugin/jQuery.js"></script>
+  <script src="js/plugin/fullPage.js"></script>
+  <script src="js/plugin/parallex.js"></script>
+  <script src="js/plugin/typeWrite.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/vendors/easings.min.js"></script> -->
+  <script src="./js/main.js"></script>\
 </body>
 
 </html>
