@@ -1,17 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 $primary: #0984e3;
 $secondary: #b2bec3;
-$bgc : #3498db;
+$bgc : #3a3a3a;
+$text-primary:black;
+$pro : 'Source Sans Pro', sans-serif;
 
-
+.primary-text{
+  color:$primary;
+  font-weight: bold;
+}
 // mixins
+@mixin easeIn {
+  transition: all 0.2s ease-in;
+}
 
-@mixin addtaskInput {
-  color:$secondary;
-  font-size: 30px;
+
+// Color Function
+
+@function color_match($color) {
+  @if lightness($color) > 65% {
+    @return #000000
+  } @else {
+    @return #ffffff;
+  }
 
 }
-@mixin addtaskInputSm {
-  color:$secondary;
-  font-size: 16px;
 
+// Responve Mixings
+
+$phone : '(max-width: 480px)';
+$tablet-p: '(max-width: 767px)';
+$tablet-l: '(min-width: 768px) and (max-width: 979px)';
+$l: '(max-width: 1270px)';
+$xl: '(min-width: 1329px)';
+$non-retina: 'screen and (-webkit-max-device-pixel-ratio: 1)';
+$retina: '(min--moz-device-pixel-ratio: 1.5),
+					(-o-min-device-pixel-ratio: 3/2),
+					(-webkit-min-device-pixel-ratio: 1.5),
+					(min-device-pixel-ratio: 1.5),
+					(min-resolution: 144dpi),
+					(min-resolution: 1.5dppx)';
+
+
+@mixin media($min, $max, $type: false) {
+
+  @if $type == 'true' {
+    @media only screen and (min-width: #{$min}) and (max-width: #{$max}) {
+      @content;
+    }
+  }
+
+  @if $max != null {
+    @media only screen and (max-width: $max) {
+      @content;
+    }
+  }
+  @if $min != null {
+    @media only screen and (min-width: $min) {
+      @content;
+    }
+  }
 }
+
+// @mixin respond-above($breakpoint) {
+
+//   // If the breakpoint exists in the map.
+//   @if map-has-key($breakpoints, $breakpoint) {
+
+//     // Get the breakpoint value.
+//     $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+//     // Write the media query.
+//     @media (min-width: $breakpoint-value) {
+//       @content;
+//     }
+
+//   // If the breakpoint doesn't exist in the map.
+//   } @else {
+
+//     // Log a warning.
+//     @warn 'Invalid breakpoint: #{$breakpoint}.';
+//   }
+// }

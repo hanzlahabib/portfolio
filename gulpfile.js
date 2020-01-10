@@ -1,7 +1,6 @@
 // initialize modues
 const { src, watch, dest, series, parallel } = require('gulp')
 const autoprefixer = require('autoprefixer');
-const tailwindcss = require('tailwindcss');
 const cssnano = require('cssnano');
 const concat = require('gulp-concat');
 const postcss = require('gulp-postcss');
@@ -24,7 +23,7 @@ const files = {
 
 function scssTask(){
   return src(files.scssMainPath)
-        .pipe(postcss([tailwindcss(), autoprefixer(), cssnano()]))
+        .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(sourcemaps.write('.'))
