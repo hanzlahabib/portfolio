@@ -6,6 +6,14 @@ $bgc : #3a3a3a;
 $text-primary:black;
 $pro : 'Source Sans Pro', sans-serif;
 
+$col-accent: #FFF;
+$col-primary: #f72f4e;
+$col-dark: #140228;
+$formElements: 5;
+
+$font-stack: Roboto, sans-serif;
+$easer: cubic-bezier(0.4, 0, 0.2, 1);
+
 .primary-text{
   color:$primary;
   font-weight: bold;
