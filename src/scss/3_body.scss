@@ -270,6 +270,7 @@ select option:disabled {
 }
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px #FFF inset;
+    box-shadow: 0 0 0px 1000px #FFF inset;
 }
 
 @media (max-width: 600px) {
