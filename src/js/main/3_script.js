@@ -14,19 +14,23 @@ if(s < 750){
 
 [].forEach.call(cards,(card)=>{
   card.addEventListener('mouseover', setCardStyle, false)
-} )
+  card.addEventListener('mouseleave', removeCardStyle, false)
 
+})
 
-
+function removeCardStyle(){
+  console.log('removed')
+  this.style.transform = '';
+}
   // Set sticker height + hover animation
  function setCardStyle(){
-   console.log(this)
+  //  console.log(this)
     var cardWidth = this.clientWidth
     var cardHeight = cardWidth/2.5;
 
     // Set scale
     var cardContentScale = cardWidth/250;
-    this.style = 'transform','translate3d(0,0,0) matrix3d(1,0,0.00,0.00,0.00,1,0.00,0,0,0,1,0,0,0,0,1) scale('+cardContentScale+')';
+    this.style.transform = 'translate3d(0,0,0) matrix3d(1,0,0.00,0.00,0.00,1,0.00,0,0,0,1,0,0,0,0,1) scale('+cardContentScale+')';
     // $('.card h1').css('font-size', cardContentScale*40+'px');
     // $('.card span').css('font-size', cardContentScale*16+'px');
     // $('.card li a').css('font-size', cardContentScale*16+'px');
