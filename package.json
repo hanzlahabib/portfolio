@@ -29,6 +29,7 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "animejs": "^3.1.0"
+    "animejs": "^3.1.0",
+    "localtunnel": "^2.0.0"
   }
 }

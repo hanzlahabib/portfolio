@@ -3,17 +3,30 @@
 .intro{
   background: #363636;
 
-  .intro-wrapper{
+  &__header{
+    .header--title{
+      font-size: 28px;
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__card-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
+    margin-top: 50px;
+    color: white;
     .intro-card{
-      background: -webkit-linear-gradient(left bottom, #272f56, #888cf0);
+      // background: -webkit-linear-gradient(left bottom, #272f56, #888cf0);
     display: grid;
     flex-direction: column;
     text-align: center;
     grid-gap: 10px;
+    margin-top: 10px;
     max-width: 230px;
       margin: 10px;
       padding: 10px;
@@ -22,6 +35,8 @@
       border-radius: 3px;
     &:hover {
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+
     }
 
     .header-img{
