@@ -1,7 +1,10 @@
-
+body{
+  font-family: $raleway;
+}
 
 .intro{
   background: #363636;
+  font-family: $raleway;
 
   &__header{
     .header--title{
@@ -11,6 +14,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      font-family: $raleway;
     }
   }
   &__card-wrapper{
@@ -76,4 +80,31 @@
     font-size: 22px;
     padding: 10px 5px;
 }
+}
+
+.icon-list {
+    /* width: 360px; */
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    /* height: 250px; */
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto -70px auto;
+}
+
+.icon-list svg {
+    width: 40px;
+    padding: 3px;
+    margin: 0 10px;
+    color: #2a2a2a;
+    opacity: .9;
+    transition: .3s ease-in-out;
+
+
+    &:hover{
+      color: #fff;
+      opacity: 1;
+      transition: .3s ease-in-out;
+      transform: scale(1.11);
+    }
 }

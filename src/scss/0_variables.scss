@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 $primary: #0984e3;
 $secondary: #b2bec3;
 $bgc : #3a3a3a;
@@ -14,6 +15,7 @@ $formElements: 5;
 $font-stack: Roboto, sans-serif;
 $easer: cubic-bezier(0.4, 0, 0.2, 1);
 
+$raleway: 'Raleway', sans-serif;
 .primary-text{
   color:$primary;
   font-weight: bold;
