@@ -1,20 +1,21 @@
 body{
-  font-family: $raleway;
+  font-family: var(--raleway);
+  background-color: #10111C;
 }
 
 .intro{
-  background: #363636;
-  font-family: $raleway;
+  background: var(--bgc);
+  font-family: var(--raleway);
 
   &__header{
     .header--title{
       font-size: 28px;
-      color: white;
+      color: var(--text-color);
       text-align: center;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: $raleway;
+      font-family: var(--raleway);
     }
   }
   &__card-wrapper{
@@ -23,7 +24,7 @@ body{
     align-items: center;
     align-content: center;
     margin-top: 50px;
-    color: white;
+    color: var(--text-color);
     .intro-card{
       // background: -webkit-linear-gradient(left bottom, #272f56, #888cf0);
     display: grid;
@@ -32,12 +33,13 @@ body{
     grid-gap: 10px;
     margin-top: 10px;
     max-width: 230px;
-      margin: 10px;
-      padding: 10px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-      border-radius: 3px;
-    &:hover {
+    background-color: var(--card-bg);
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    border-radius: 3px;
+      &:hover {
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
       transition: all 0.5s cubic-bezier(.25,.8,.25,1);
 
@@ -52,6 +54,11 @@ body{
     }
   }
 }
+
+.showcase{
+  background-color: var(--bgc);
+}
+
 .showcase__wrapper{
   display: grid;
   grid-template-columns: auto auto auto;
@@ -96,13 +103,13 @@ body{
     width: 40px;
     padding: 3px;
     margin: 0 10px;
-    color: #2a2a2a;
+    color: var(--text-color);
     opacity: .9;
     transition: .3s ease-in-out;
 
 
     &:hover{
-      color: #fff;
+      color: var(--text-color);
       opacity: 1;
       transition: .3s ease-in-out;
       transform: scale(1.11);

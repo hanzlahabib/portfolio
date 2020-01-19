@@ -1,23 +1,36 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-$primary: #0984e3;
-$secondary: #b2bec3;
-$bgc : #3a3a3a;
-$text-primary:black;
+// var(--primary-color): #0984e3;
+// var(--secondary-color): #b2bec3;
+// var(--bgc) : #fff;
+// $text-primary:black;
 $pro : 'Source Sans Pro', sans-serif;
-
 $col-accent: #FFF;
 $col-primary: #f72f4e;
 $col-dark: #140228;
 $formElements: 5;
-
 $font-stack: Roboto, sans-serif;
 $easer: cubic-bezier(0.4, 0, 0.2, 1);
-
 $raleway: 'Raleway', sans-serif;
+
+:root{
+  --primary-color: #0984e3;
+  --secondary-color: #b2bec3;
+  --bgc: #28293D ;
+  --card-bg: #fff;
+  --text-color: #fff;
+  --font-color: #424242;
+  --bg-color: #fff;
+  --heading-color: #292922;
+  --raleway: 'Raleway', sans-serif;
+
+}
+
+
+
 .primary-text{
-  color:$primary;
+  color:var(--primary-color);
   font-weight: bold;
 }
 // mixins

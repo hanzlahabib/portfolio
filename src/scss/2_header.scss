@@ -1,37 +1,13 @@
 .header {
-  // background-image: linear-gradient(to bottom, rgba(0, 0, 0, .7s), rgba(0, 0, 0, .7s)), url(../images/background-4.jpg);
-  // background: white;
-  // background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
-  // background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
-  // background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-
-  // background: #c31432;  /* fallback for old browsers */
-  // background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
-  // background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  // background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
-
-  // background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
-
-  // background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
-
-  // background-image: linear-gradient(to right, #434343 0%, black 100%);
-  // background-size: cover;
-
-  // background-position: bottom;
-  // object-fit: cover;
-  // background-repeat: no-repeat;
-
-
-  background-color: #0b0a0b;
-    background-image:
-    url(
-      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3…3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'%3E%3C/path%3E%3C/svg%3E");
-    height: 100vh;
+  background-color: var(--bgc);
+  padding: 0 50px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0,0,0, .5);
+  height: 100vh;
 
   .navbar {
     width: 100%;
-    color: color_match($bgc);
+    color: var(--text-color);
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -42,7 +18,7 @@
       font-weight: bold;
       span {
         font-size: 50px;
-        color: $primary;
+        color: var(--primary-color);
       }
     }
 
@@ -63,7 +39,7 @@
             display: block;
             margin-bottom: -5px;
             position: absolute;
-            border-bottom: 3px $primary solid;
+            border-bottom: 3px var(--primary-color) solid;
             bottom: 0;
             right: 25px;
             opacity: 0;
@@ -88,7 +64,7 @@
       width: 50vw;
 
       .welcome{
-        color: white;
+        color: var(--text-color);
         position: relative;
         top: 20%;
         .title{
@@ -130,8 +106,4 @@
 
 img{
   max-width: 100%;
-}
-.polymorph {
-  fill: #398f5a;
-  width: 250px;
 }
