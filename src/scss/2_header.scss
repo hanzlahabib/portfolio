@@ -1,8 +1,7 @@
 .header {
-  background-color: var(--bgc);
+  // background-color: var(--bgc);
   padding: 0 50px;
   border-radius: 10px;
-  box-shadow: 1px 1px 10px rgba(0,0,0, .5);
   height: 100vh;
 
   .navbar {
@@ -16,9 +15,16 @@
     .logo {
       font-size: large;
       font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
       span {
         font-size: 50px;
         color: var(--primary-color);
+        position: absolute;
+        bottom: -11px;
+        right: -11px;
       }
     }
 
@@ -60,9 +66,13 @@
   .hero{
     display: flex;
     height: calc(100vh - 100px);
+
     .hero-section-1{
       width: 50vw;
+      @include media(null, 750px){
+        width: 100vw;
 
+      }
       .welcome{
         color: var(--text-color);
         position: relative;
@@ -71,6 +81,25 @@
           display: flex;
           flex-direction: column;
           font-size: 65px;
+          justify-content: flex-start;
+          align-items: flex-start;
+          @include media(null, 750px){
+            font-size: 50px;
+            justify-content: center;
+            align-items: center;
+          }
+          @include media(null, 450px){
+            white-space: normal;
+            font-size: 40px;
+
+          }
+
+          span{
+            @include media(null, 750px){
+              text-align: center;
+            }
+          }
+
         }
       }
     }
@@ -78,7 +107,9 @@
       width: 50vw;
       display: flex;
       flex-direction: column;
-
+      @include media(null, 750px){
+        display: none;
+      }
       .layer2{
         width: 330px;
       }

@@ -8,14 +8,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 new fullpage('.wrapper', {
-  //options here
-  // afterLoad: function(origin, {index}, direction){
-  //   console.log(index)
-  //   if(index == 2){
-  //     fullpage_api.setAutoScrolling(false);
-  //   }else{
-  //     fullpage_api.setAutoScrolling(true);
+  afterLoad: function(origin, {index}, direction){
+    console.log(index)
+    // if(index == 2){
+    //   fullpage_api.setAutoScrolling(false);
+    // }else{
+    //   fullpage_api.setAutoScrolling(true);
 
-  //   }
-  // },
+    // }
+  },
 });
