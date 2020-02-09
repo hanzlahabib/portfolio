@@ -435,6 +435,4 @@
 		// callback for reset
 		resetCallback: function() {}
 	};
-
-
 }(window, document, window.jQuery);

@@ -3,7 +3,7 @@
   padding: 0 50px;
   border-radius: 10px;
   height: 100vh;
-
+  overflow: hidden;
   .navbar {
     width: 100%;
     color: var(--text-color);
@@ -126,6 +126,15 @@
 // .intro {
 
 // }
+
+.popup{
+  width: 680px;
+  height: 720px;
+  background-color: #fff;
+  img{
+    width: 50%;
+  }
+}
 
 .intro__header, .showcase__header {
   display: flex;

@@ -6,15 +6,3 @@ document.addEventListener('DOMContentLoaded', function () {
     loop: true
   });
 });
-
-new fullpage('.wrapper', {
-  afterLoad: function(origin, {index}, direction){
-    console.log(index)
-    // if(index == 2){
-    //   fullpage_api.setAutoScrolling(false);
-    // }else{
-    //   fullpage_api.setAutoScrolling(true);
-
-    // }
-  },
-});
